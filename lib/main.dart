@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         title: Text("Awesome App"),
       ),
       body: Container(
-        child: Text("Wlecom to Flutter"),
+        child: Text("Welcome to Flutter"),
       ),
     );
   }
