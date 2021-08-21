@@ -16,23 +16,35 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome App"),
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          width: 100,
-          height: 100,
-          alignment: Alignment.center,
-          child: Text(
-            "I am a Box",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-          decoration: BoxDecoration(
+      body: Container(
+        color: Colors.tealAccent,
+        width: 500,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
               color: Colors.blueGrey,
-              gradient: LinearGradient(colors: [Colors.pink, Colors.yellow]),
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [BoxShadow(blurRadius: 5, color: Colors.grey)]),
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              color: Colors.yellow,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              color: Colors.green,
+            ),
+          ],
         ),
       ),
     );
