@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/pages/home_page.dart';
+import 'package:flutter_app1/pages/home_page_with_fb.dart';
 import 'package:flutter_app1/pages/lonin_page.dart';
 import 'package:flutter_app1/utils/contants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.blue),
         home: Constants.prefs?.getBool("loggedIn") == true
-            ? HomePage()
+            ? HomePageFB()
             : LoginPage(),
         routes: {
           LoginPage.routerName: (context) => LoginPage(),
