@@ -5,6 +5,7 @@ import 'dart:convert';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+  static const String routerName = "/home";
 
   @override
   _HomePageState createState() => _HomePageState();

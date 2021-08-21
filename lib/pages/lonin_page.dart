@@ -3,7 +3,7 @@ import 'package:flutter_app1/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
-
+  static const String routerName = "/login";
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -65,10 +65,11 @@ class _LoginPageState extends State<LoginPage> {
                             ElevatedButton(
                               onPressed: () {
                                 // formKey.currentState.validate();
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => HomePage()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => HomePage()));
+                                Navigator.pushNamed(context, HomePage.routerName)
                               },
                               child: Text("Sign In"),
                             )
