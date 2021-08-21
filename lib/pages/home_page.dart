@@ -61,7 +61,10 @@ class _HomePageState extends State<HomePage> {
                 return ListTile(
                   title: Text(data[index]["title"]),
                   subtitle: Text("ID: ${data[index]["id"]}"),
-                  leading: Icon(Icons.verified_user),
+                  leading: Icon(
+                    Icons.account_circle_rounded,
+                    size: 40,
+                  ),
                 );
               },
               itemCount: data.length,
