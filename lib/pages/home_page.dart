@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/drawer.dart';
+import 'package:flutter_app1/pages/lonin_page.dart';
+import 'package:flutter_app1/utils/contants.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -46,7 +48,9 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Constants.prefs?.setBool("loggedIn", false);
+                // Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, LoginPage.routerName);
               },
               icon: Icon(Icons.exit_to_app))
         ],
@@ -57,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                 return ListTile(
                   title: Text(data[index]["title"]),
                   subtitle: Text("ID: ${data[index]["id"]}"),
-                  leading: Image.network(data[index]["thumbnailUrl"]),
+                  leading: Icon(Icons.verified_user),
                 );
               },
               itemCount: data.length,
